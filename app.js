@@ -1,9 +1,13 @@
 const express = require('express');
 const app = express();
 
-app.listen(3000,function(){
-    console.log('listening on 3000, yo');
+const port = 8080;
+const host = '0.0.0.0'
+
+app.listen(port,host,()=>{
+    console.log(`listening ${host} : ${port}`)
 });
+
 
 app.get('/', (req, res) => {
     res.send('Hello world\n');
